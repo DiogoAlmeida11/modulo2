@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RegistrationForm.HTML</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="http://www.webucator.com/course-demos/htm101/process-form.cfm" method="POST">
+        User name: <br><input type="text" name="username" id="username"><br>
+        Password: <br><input type="text" name="password" id="pw"><br>
+        Email: <br><input type="text" name="email" id="emailme"><br>
+        <label><input type="radio" name="gender" id="genderm" value="m">Male<label>
+        <label><input type="radio" name="gender" id="genderf" value="f">Female<label>
+        <input type="checkbox" name="terms" id="terms" value="termos">Leu e aceita os termos e condições
+        <select name="referral" id="referral">
+            <option value="Please choose" value="0">Please choose </option>
+            <option value="Word of Mouth" value="wom">Word of Mouth</option>
+            <option value="Other" >Other</option>
+        </select>
+        <br>
+        <select>
+                <optgroup label="Search Engine">
+                  <option value="google">Google</option>
+                  <option value="firefox">Firefox</option>
+                  <option value="yaahooo">Yaahooo</option>
+                </optgroup>
+               
+        <select>
+            <br>
+            <h5>Comentários:</h5>
+            <textarea name="comments" id="comments" rows="10" cols="30"></textarea>
+        <input type="submit" value="Submit">
+<input type="reset" value="Reset">
+       
+    <form>
+</body>
+</html>
