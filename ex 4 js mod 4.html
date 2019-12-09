@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TAW-MOD4-EX4-QUESTION1</title>
+    
+</head>
+
+<body>
+    
+    <p id="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+        vestibulum justo gravida auctor bibendum. Morbi tincidunt nisl in arcu
+        pulvinar sodales sed placerat sapien. Quisque eu porta libero. Aenean
+        sodales nunc ac dictum fermentum. Aenean sollicitudin dui sed elit tempor,
+        eget accumsan tortor dictum. Etiam arcu libero, suscipit eu urna ac,
+        pulvinar porttitor turpis. Nulla in leo augue. Duis viverra, odio quis
+        pulvinar tristique, eros mi laoreet arcu, at feugiat libero nisi at eros.
+        Phasellus posuere leo nibh, eu vestibulum quam laoreet vitae. Nam
+        tincidunt nibh eget ullamcorper congue. Ut fringilla lacus risus. Etiam id
+        dapibus dui. Pellentesque tincidunt congue dui, ut varius libero
+        vestibulum ac.
+    </p>
+    <div><button id="jsstyle" onclick="js_style()">Style</button></div>
+    <script>
+        function js_style() {
+            let textElement = document.getElementById("text")
+            textElement.style.fontSize = "14pt"
+            textElement.style.fontFamily = "Comic Sans MS"
+            textElement.style.color = "green"
+        }
+    </script>
+
+    /////////////////////////////////////////////////////////////////////////////////////
+
+    <form id="form1" onsubmit="return getFormvalue()">
+            First name: <input type="text" name="fname" value="John" /><br />
+            Last name: <input type="text" name="lname" value="Doe" /><br />
+            <input type="submit" value="Submit" />
+        </form>
+        <script>
+            function getFormvalue() {
+                var x = document.getElementById("form1")
+                for (var i = 0; i < x.length; i++) {
+                    if (x.elements[i].value != "Submit") {
+                        console.log(x.elements[i].value)
+                    }
+                }
+                return false
+            }
+        </script>
+
+        //////////////////////////////////////////////////////////////////////////////////
+
+        <h1>About Me</h1>
+
+    <ul>
+        <li>Name: <span id="nickname">Joe Bloggs</span></li>
+        <li>Age: <span id="age">25</span></li>
+        <li>Hometown: <span id="hometown">Paris</span></li>
+    </ul>
+    <script>
+        document.getElementById("nickname").innerHTML = "John Doe"
+        document.getElementById("age").innerHTML = "30"
+        document.getElementById("hometown").innerHTML = "London"
+        var items = document.getElementsByTagName("li")
+        for (var i = 0; i < items.length; i++) {
+            items[i].className = "listitem"
+        }
+        var image = document.createElement("img")
+        image.src = "http://placekitten.com/200/300"
+        document.body.appendChild(image)
+
+    </script>
+    //////////////////////////////////////////////////////////////////////////////////////////
+
+    <h1>My Book List</h1>
+    <script>
+      var books = [
+        {
+          title: "The Design of EveryDay Things",
+          author: "Don Norman",
+          alreadyRead: false
+        },
+        {
+          title: "The Most Human Human",
+          author: "Brian Christian",
+          alreadyRead: true
+        }
+      ];
+      for (var i = 0; i < books.length; i++) {
+        var bookP = document.createElement("p")
+        var bookDescription = document.createTextNode(
+          books[i].title + " by " + books[i].author
+        )
+        bookP.appendChild(bookDescription)
+        document.body.appendChild(bookP)
+      }
+    </script>
+    //////////////////////////////////////////////////////////////////////////////////////////
+  
+    <h1>Text Inputs</h1>
+
+
+    <ul>
+      <li>text01: <input type="text" id="text01" /></li>
+      <li>text02: <input type="text" id="text02" /></li>
+      <li>text03: <input type="text" id="text03" /></li>
+    </ul>
+  
+    <button id="output-button">Output Text</button>
+  
+    <div id="output"></div>
+    <script>
+      function outputText() {
+        let outputDiv = document.getElementById("output")
+        let text01 = document.getElementById("text01").value
+        let text02 = document.getElementById("text02").value
+        let text03 = document.getElementById("text03").value
+        let outputText = text01 + " " + text02 + " " + text03
+        outputDiv.innerHTML = outputText;
+      }
+      var button = document.getElementById("output-button")
+      button.addEventListener("click", outputText)
+      
+    </script>
+    //////////////////////////////////////////////////////////////////////////////////////
+
+    <h1>Text Inputs</h1>
+
+    <ul>
+      <li>text01: <input type="text" id="text01" /></li>
+      <li>text02: <input type="text" id="text02" /></li>
+      <li>text03: <input type="text" id="text03" /></li>
+    </ul>
+  
+    <button id="output-button">Output Text</button>
+  
+    <div id="output"></div>
+    <script>
+      function outputText() {
+        let outputDiv = document.getElementById("output")
+        let text01 = document.getElementById("text01").value
+        let text02 = document.getElementById("text02").value
+        let text03 = document.getElementById("text03").value
+        let outputText = text01 + " " + text02 + " " + text03
+        outputDiv.innerHTML = outputText;
+      }
+      var button = document.getElementById("output-button")
+      button.addEventListener("click", outputText)
+      
+    </script>
+
+    ///////////////////////////////////////////////////////////////////
+
+    <script>
+            window.onload = function () {
+              alert("Page is loaded!")
+            }
+          </script>
+    
+</body>
+
+</html>
